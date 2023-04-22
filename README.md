@@ -1,2 +1,2 @@
 # Python-projects
-Advent of Code and other personal projects
+Just some personal projects
