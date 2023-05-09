@@ -39,7 +39,6 @@ def findWords(mat, visited, i, j, curr_word, words, results):
 
 def main():
     # Declare vars and get scrabble dictionary loaded
-    words = ""
     results = set()
     visited = set()
     mat = []
