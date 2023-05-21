@@ -37,6 +37,7 @@ class Solution:
         return temp.next
 
 solution = Solution()
+
 l1 = ListNode(4)
 l1.next = ListNode(3)
 l1.next.next = ListNode(2)

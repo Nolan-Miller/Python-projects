@@ -3,6 +3,8 @@ Given a signed 32-bit integer x, return x with its digits reversed. If reversing
 
 This solution beat 48.35% of run times (40 ms) and 25.87% of memory usages (16.3 MB)
 '''
+
+import re
 class Solution:
     def reverse(self, x: int) -> int:
         if x == 0:
@@ -18,3 +20,13 @@ class Solution:
         if num < -2**31 or num > 2**31 - 1:
             return 0
         return num * sign
+
+solution = Solution()
+while True:
+    num = input("Enter a number to be reversed ('q' to quit') ")
+    if num.lower() == 'q':
+        break
+    if not num.isdigit():
+        print("Enter only an integer value.")
+        continue
+    print(solution.reverse(int(num)))
