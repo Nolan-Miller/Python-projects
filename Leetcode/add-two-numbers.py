@@ -36,25 +36,23 @@ class Solution:
             curr = curr.next
         return temp.next
 
+l1_input = input("Enter values for l1 (space-separated): ")
+l1_values = list(map(int, l1_input.split()))
+l1 = ListNode()
+current_node = l1
+for value in l1_values:
+    current_node.next = ListNode(value)
+    current_node = current_node.next
+
+l2_input = input("Enter values for l2 (space-separated): ")
+l2_values = list(map(int, l2_input.split()))
+l2 = ListNode()
+current_node = l2
+for value in l2_values:
+    current_node.next = ListNode(value)
+    current_node = current_node.next
+
 solution = Solution()
+result = solution.addTwoNumbers(l1.next, l2.next)
 
-l1 = ListNode(4)
-l1.next = ListNode(3)
-l1.next.next = ListNode(2)
-
-l2 = ListNode(5)
-l2.next = ListNode(3)
-l2.next.next = ListNode(6)
-
-result = solution.addTwoNumbers(l1, l2)
-
-print(f" {l1.toString()}")
-print(f"+{l2.toString()}")
-for i in range(1+max(len(l1.toString()), len(l2.toString()))):
-    print("_", end="")
-print()
-print(" ", end="")
-while result:
-    print(result.val, end = "")
-    result = result.next
-print()
+print("Result:", result.toString())
